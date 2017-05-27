@@ -1,0 +1,43 @@
+/*Codechef problem code- PREFINVS
+  Submitted in a contest named MAY 2017 Lunchtime*/
+  
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner s=new Scanner(System.in);
+		int i,j,k,p=0;
+		String a=s.nextLine();
+		
+		j=a.length();
+
+		StringBuffer m=new StringBuffer(a);
+
+		while(j>0)
+		{
+		    if((m.charAt(j-1))=='1')
+		    {
+		        for(k=j-1;k>=0;k--)
+		        {
+		            if((m.charAt(k))=='1')
+		            m.replace(k,k+1,"0");
+		            
+		            else
+		            m.replace(k,k+1,"1");
+		            
+		        }
+		        p=p+1;
+		        
+		    }
+		    j=j-1;
+		    
+		}
+		System.out.println(p);
+
+	}
+	    
+ }
