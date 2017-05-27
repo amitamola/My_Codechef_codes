@@ -1,0 +1,54 @@
+/* Codechef program in May 2017 Lunch Contest
+Program Code- SUBINVER */
+
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner s=new Scanner(System.in);
+		int i,j,k,p=0;
+		int a=s.nextInt();
+		int b=s.nextInt();
+		StringBuffer m=new StringBuffer("");
+		
+		for(i=0;i<a;i++)
+		m.append("0");
+		
+		String []q=new String[b+1];
+		q[0]=m.toString();
+		
+        for(j=1;j<=b;j++)
+        {
+            int l=s.nextInt();
+            int n=s.nextInt();
+            
+            for(k=n-1;k>=l-1;k--)
+		        {
+		            if((m.charAt(k))=='1')
+		            m.replace(k,k+1,"0");
+		            
+		            else
+		            m.replace(k,k+1,"1");
+		            
+		        }
+		        q[j]=m.toString();
+        }
+		String max = q[0];
+        for (int ktr = 0; ktr < q.length; ktr++) 
+        {
+            if ((q[ktr].compareTo(max))>0) 
+            {
+                max = q[ktr];
+            }
+        }
+        
+        System.out.println(max);
+
+	}
+	    
+ }
