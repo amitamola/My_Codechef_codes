@@ -1,0 +1,50 @@
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner s = new Scanner(System.in).useDelimiter("\\s");
+            int i,j,b=0,r=0,m=0,e=0;
+		    int k=s.nextInt();
+		    s.nextLine();
+		    for(i=1;i<=k;i++)
+		    {
+		        for(j=0;j<4;j++)
+		        {
+		           String q=s.next();
+		            
+		            if(q.compareTo("Barcelona")==0)
+		            {  
+		                b=s.nextInt();
+		            }
+		            
+		            if(q.compareTo("RealMadrid")==0)
+		            {  
+		                r=s.nextInt();
+		            }
+		            
+		            if(q.compareTo("Malaga")==0)
+		            {  
+		                m=s.nextInt();
+		            }
+		            
+		            if(q.compareTo("Eibar")==0)
+		            {  
+		                e=s.nextInt();
+		            }
+		        }
+	
+		        if((r<m)&&(b>e))
+		        System.out.println("Barcelona");
+		        
+		        else
+		        System.out.println("RealMadrid");
+		    }
+		
+	}
+	    
+ }
